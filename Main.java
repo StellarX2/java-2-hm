@@ -5,26 +5,26 @@ public class Main {
     public static void main(String[] args) {
         List<Student> students = Arrays.asList(
             new Student("Алиса", Arrays.asList(
-                new Book("Чистый код", 464, 2008),
-                new Book("Эффективная Java", 412, 2018),
-                new Book("Параллелизм в Java", 384, 2006),
-                new Book("Java 8 в действии", 424, 2014),
-                new Book("Java для начинающих", 720, 2005),
-                new Book("Сумерки", 1234, 1020)
-            )),
-            new Student("Боб", Arrays.asList(
-                new Book("Чистый код", 464, 2008),
-                new Book("Основы Java", 928, 2016),
-                new Book("Головоломки Java", 312, 2005),
-                new Book("Философия Java", 1150, 2006),
-                new Book("Java SE 8", 350, 2017),
-                new Book("Spring в действии", 520, 2020)
-            ))
+        new Book("Как вырастить кота наоборот", 464, 2008),
+        new Book("Эффективная магия для чайников", 412, 2018),
+        new Book("Параллельные вселенные и зачем они тебе", 384, 2006),
+        new Book("Монти Паймон и священный Грааль", 424, 2014),
+        new Book("Приключения багов в коде", 720, 2005),
+        new Book("Сумерки начало", 1234, 1020)
+    )),
+    new Student("Боб", Arrays.asList(
+        new Book("Как вырастить кота наоборот", 464, 2008),
+        new Book("Основы кода на языке боли", 928, 2016),
+        new Book("Головоломки (буквально)", 312, 2005),
+        new Book("Философия багов", 1150, 2006),
+        new Book("Секреты кофе и Java", 350, 2017),
+        new Book("Spring и восстание машин", 520, 2020)
+    ))
         );
 
         // для каждого студента:
         students.forEach(student -> {
-            System.out.println("Студент" + student.getName());
+            System.out.println("Студент " + student.getName());
 
             // обработка книг через стрим
             List<Book> filteredBooks = student.getBooks().stream()
