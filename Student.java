@@ -9,6 +9,9 @@ class Student {
         this.books = books;
     }
 
+    public String getName() {
+        return name;
+    }
     public List<Book> getBooks() {
         return books;
     }
